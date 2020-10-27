@@ -35,7 +35,15 @@ public class BankAccount{
   }
 
   //4b. withdraw $$
-
+  public boolean withdraw(double amount){
+    if (amount>=0){
+      if ((balance-amount) >= 0){
+        balance = balance - amount;
+        return true;
+      }
+    }
+    return false;
+  }
 
   public static void main(String[] args) {
 //tests are in Tester.java
