@@ -44,7 +44,9 @@ public class BankAccount{
   }
 
   //5. showing accountID and balance
-  //public
+  public String toString(){
+    return (accountID+"\t"+balance);
+  }
 
   public static void main(String[] args) {
 //tests are in Tester.java
