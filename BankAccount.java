@@ -12,7 +12,14 @@ public class BankAccount{
     password = p;
   }
 
-  
+  //2. get methods for balance, accountID
+  public double getBalance(){
+    return balance;
+  }
+
+  public int getAccountID(){
+    return accountID;
+  }
 
 
   public static void main(String[] args) {
