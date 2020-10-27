@@ -26,18 +26,27 @@ public class BankAccount{
     password = newPass;
   }
 
+  //for testing setPassword
+  //public String getPassword(){
+    //return password;
+  //}
+
   //4a. deposit $$
   public boolean deposit(double amount){
+    //System.out.println(amount);
     if (amount>=0){
       balance+=amount;
+      //System.out.println(balance);
     }
     return amount>=0;
   }
 
   //4b. withdraw $$
   public boolean withdraw(double amount){
+    //System.out.println(amount);
     if (amount>=0 && amount<=balance){
       balance = balance - amount;
+      //System.out.println(balance);
       return true;
     }
     return false;
@@ -49,7 +58,7 @@ public class BankAccount{
   }
 
   public static void main(String[] args) {
-//tests are in Tester.java
+//test cases are in BankAccountTester.java
   }
 
 }
