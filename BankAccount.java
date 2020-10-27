@@ -26,6 +26,16 @@ public class BankAccount{
     password = newPass;
   }
 
+  //4a. deposit $$
+  public boolean deposit(double amount){
+    if (amount>=0){
+      balance+=amount;
+    }
+    return amount>=0;
+  }
+
+  //4b. withdraw $$
+
 
   public static void main(String[] args) {
 //tests are in Tester.java
