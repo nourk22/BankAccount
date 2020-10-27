@@ -21,6 +21,11 @@ public class BankAccount{
     return accountID;
   }
 
+  //3. set method for password
+  public void setPassword(String newPass){
+    password = newPass;
+  }
+
 
   public static void main(String[] args) {
 //tests are in Tester.java
