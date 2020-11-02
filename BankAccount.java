@@ -5,14 +5,13 @@ public class BankAccount{
   private int accountID;
   private String password;
 
-  //1. constructor
   public BankAccount(int a, String p){
     balance = 0.0;
     accountID = a;
     password = p;
   }
 
-  //2. get methods for balance, accountID
+  // get methods for balance, accountID
   public double getBalance(){
     return balance;
   }
@@ -21,7 +20,7 @@ public class BankAccount{
     return accountID;
   }
 
-  //3. set method for password
+  // set method for password
   public void setPassword(String newPass){
     password = newPass;
   }
@@ -31,7 +30,7 @@ public class BankAccount{
     //return password;
   //}
 
-  //4a. deposit $$
+  // deposit $$
   public boolean deposit(double amount){
     //System.out.println(amount);
     if (amount>=0){
@@ -41,7 +40,7 @@ public class BankAccount{
     return amount>=0;
   }
 
-  //4b. withdraw $$
+  // withdraw $$
   public boolean withdraw(double amount){
     //System.out.println(amount);
     if (amount>=0 && amount<=balance){
@@ -52,9 +51,25 @@ public class BankAccount{
     return false;
   }
 
-  //5. showing accountID and balance
+  // check if the passwords match
+  private boolean authenticate(String password){
+    return this.password.equals(password);
+  }
+
+  // Transfer $$ from this BankAccount to the other
+  // only when the password matches, and the withdrawal succeeds.
+  public boolean transferTo(BankAccount other, double amount, String password){
+    if (withdraw(amount) && authenticate(password)){
+      other.deposit(amount);
+      return true;
+    }
+    return false;
+  }
+
+
+  // turn accountID and balance into Strings
   public String toString(){
-    return (accountID+"\t"+balance);
+    return ("#" + accountID + "\t" + "$" + balance);
   }
 
   public static void main(String[] args) {
