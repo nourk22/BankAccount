@@ -34,5 +34,19 @@ public class BankAccountTester{
   System.out.println(acc2.getBalance()); //expecting 468;
   System.out.println(acc1.getBalance()); //expecting 12545
 */
+
+  /*BankAccount account = new BankAccount(94041, "password");
+  account.deposit(100);
+  BankAccount account2 = new BankAccount (51213, "cats");
+  account2.deposit(200);
+  System.out.println(account.getBalance()); //expecting 100
+  System.out.println(account2.getBalance()); //expecting 200
+  System.out.println(account2.transferTo(account, 50, "cats")); //expecting true
+  System.out.println(account.getBalance()); //expecting 150
+  System.out.println(account2.getBalance()); //expecting 150
+  System.out.println(account2.transferTo(account, 50, "hello")); //expecting false
+  System.out.println(account.getBalance()); //expecting 150
+  System.out.println(account2.getBalance()); //expecting 150
+*/
   }
 }
