@@ -63,6 +63,7 @@ public class BankAccount{
       other.deposit(amount);
       return true;
     }
+    deposit(amount);
     return false;
   }
 
